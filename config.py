@@ -10,7 +10,7 @@ API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 OWNER_ID = int(os.getenv("OWNER_ID", None))
 OWNER_USERNAME = os.getenv("OWNER_USERNAME", "MOH_MAYA_OFFICIAL")
-BOT_USERNAME = os.getenv("BOT_USERNAME", "ShrutixMusicBot")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "SPOTIFY_X_MUSIC_BOT")
 
 MONGO_DB_URI = os.getenv("MONGO_DB_URI", None)
 LOG_GROUP_ID = int(os.getenv("LOG_GROUP_ID", None))
