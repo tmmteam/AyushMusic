@@ -10,9 +10,11 @@ from .logging import LOGGER
 
 dirr()
 
-# git only for vps, not heroku
-if not os.getenv("DYNO"):
+# ✅ heroku / docker pe git mat chalao
+if os.getenv("DYNO") is None:
     git()
+else:
+    LOGGER(__name__).info("git skipped (heroku detected)")
 
 dbb()
 heroku()
@@ -22,10 +24,10 @@ userbot = Userbot()
 
 from .platforms import *
 
-apple = AppleAPI()
-carbon = CarbonAPI()
-soundcloud = SoundAPI()
-spotify = SpotifyAPI()
-resso = RessoAPI()
-telegram = TeleAPI()
-youtube = YouTubeAPI()
+Apple = AppleAPI()
+Carbon = CarbonAPI()
+SoundCloud = SoundAPI()
+Spotify = SpotifyAPI()
+Resso = RessoAPI()
+Telegram = TeleAPI()
+YouTube = YouTubeAPI()
